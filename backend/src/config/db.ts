@@ -1,7 +1,9 @@
 import mongoose from "mongoose";
 
 const URL = process.env.MONGO_URL || "";
-console.log({URL});
+const DATABASE = process.env.DATABASE || "";
+
+console.log({URL, DATABASE});
 
 mongoose.connection.on('error', (error) => {
   console.log('DB after initial connection:', error);
